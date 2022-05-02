@@ -1,0 +1,12 @@
+:root {
+	--background: white;
+	--foreground: black;
+	
+	--font-family: "Noto Sans";
+	--header-style: 34px;
+	--body-style: 24px;
+	--mobile-body-style: 20px;
+
+	--nav-color: #575555;
+	--menu-color: #F9F9F9;
+}
