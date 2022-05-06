@@ -1,9 +1,10 @@
 <template>
     <div class="navbar">
+		<div class="apple-logo-white"><RouterLink :to="{ name: 'home' }"><img src="images/apple-logo-white.png" alt="apple-logo"></RouterLink></div>
 		<nav>
-			<a href="#">Contacts</a>
-			<a href="#">Payment and Delivery</a>
-			<a href="#">Guarantee</a>
+			<div class="nav-link"><a href="#">Contacts</a></div>
+			<div class="nav-link hidden-link"><a href="#">Payment and Delivery</a></div>
+			<div class="nav-link hidden-link"><a href="#">Guarantee</a></div>
 		</nav>
 		<div class="navbar__social-media">
 			<a href="#"><img src="images/instagram-vector.png" alt="instagram-icon"></a>
@@ -21,20 +22,32 @@
 
 
 <style>
+/* Mobile */
     .navbar {
 		width: 100%;
 		height: 50px;
 		background-color: var(--nav-color);
 		display: flex;
 		flex-flow: row nowrap;
-		justify-content: space-between;
+		justify-content: space-around;
 		align-items: center;
 	}
 
-	nav a {
+	nav {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: flex-start;
+		gap: 1em;
+	}
+
+	.nav-link a {
 		color: white;
 		text-decoration: none;
-		margin-left: 1em;
+		font-size: var(--mobile-body-style);
+	}
+
+	.hidden-link {
+		display: none;
 	}
 
 	.navbar__social-media {
@@ -43,11 +56,42 @@
 	}
 
 	.navbar__social-media a {
-		margin-left: 1em;
+		margin-left: 0.5em;
 	}
+
+	.navbar__social-media a img {
+		height: 20px;
+		width: 20px;
+	} 
 
 	.navbar__search-icon {
 		margin-right: 2em;
+		height: 20px;
+		width: 20px;
+	}
+
+	@media screen and (min-width: 800px) {
+		.apple-logo-white {
+			display: none;
+		}
+		.nav-link a {
+			font-size: var(--body-style);
+		}
+
+		.hidden-link {
+			display: block;
+		}
+
+		.navbar__social-media a img {
+			height: 30px;
+			width: 30px;
+		} 
+
+		.navbar__search-icon {
+			margin-right: 2em;
+			height: 30px;
+			width: 30px;
+		}
 	}
 
 </style>
