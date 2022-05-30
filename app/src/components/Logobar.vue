@@ -1,6 +1,7 @@
 <template>
     <div class="logo-bar">
 		<button class="hamburger-button"><img src="/images/hamburger-button.png" alt="hamburger-button"></button>
+		<button class="close-menu-button"><img src="/images/close-icon.png" alt="close-icon"></button>
 		<div class="logo-bar__logo">
 			<RouterLink :to="{ name: 'home' }"><img src="/images/apple-logo.png" alt="apple-logo"></RouterLink>
 			<div class="logo-bar__name">Apple Pit</div>
@@ -41,6 +42,10 @@
         margin-top: 0.5em;
 	}
 
+	.close-menu-button {
+
+	}
+
 	.logo-bar__logo {
 		display: none;
 	}
@@ -51,6 +56,10 @@
 		}
 
 		.hamburger-button {
+			display: none;
+		}
+
+		.close-menu-button {
 			display: none;
 		}
 
