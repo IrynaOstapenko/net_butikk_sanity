@@ -1,17 +1,17 @@
 <template>
     <div class="navbar">
-		<div class="apple-logo-white"><RouterLink :to="{ name: 'home' }"><img src="images/apple-logo-white.png" alt="apple-logo"></RouterLink></div>
+		<div class="apple-logo-white"><RouterLink :to="{ name: 'home' }"><img src="/images/apple-logo-white.png" alt="apple-logo"></RouterLink></div>
 		<nav>
 			<div class="nav-link"><a href="#">Contacts</a></div>
 			<div class="nav-link hidden-link"><a href="#">Payment and Delivery</a></div>
 			<div class="nav-link hidden-link"><a href="#">Guarantee</a></div>
 		</nav>
 		<div class="navbar__social-media">
-			<a href="#"><img src="images/instagram-vector.png" alt="instagram-icon"></a>
-			<a href="#"><img src="images/facebook-vector.png" alt="facebook-icon"></a>
+			<a href="#"><img src="/images/instagram-vector.png" alt="instagram-icon"></a>
+			<a href="#"><img src="/images/facebook-vector.png" alt="facebook-icon"></a>
 		</div>
 		<div class="navbar__search-icon">
-			<a href="#"><img src="images/search-vector.png" alt="search-icon"></a>
+			<a href="#"><img src="/images/search-vector.png" alt="search-icon"></a>
 		</div>
 	</div>
 </template>
