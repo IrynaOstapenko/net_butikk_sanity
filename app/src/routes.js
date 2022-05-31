@@ -1,4 +1,3 @@
-//import Home from './views/Home.vue';
 import ProductList from './views/ProductList.vue';
 
 export default [
