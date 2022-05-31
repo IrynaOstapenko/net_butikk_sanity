@@ -15,6 +15,7 @@
 				<button @click="closeCart()"><img src="/images/close-icon.png" alt="close-icon" class="close-icon-image"></button>
 			</div>
 
+			<!-- Create array of chosen products -->
 			<div class="chosen-items" v-for="(item, index) in cart" :key="index">
         		<div class="chosen-items__item">
 					<img :src="item.image.asset.url" class="chosen-item__image">
@@ -31,6 +32,7 @@
 
 <script>
     export default {
+		// Using double props to get data from parent component
         props: {
             cart: {
 				type: Array
@@ -41,6 +43,7 @@
 				isActive: false,
 			}
 		},
+		// Calculating total price of the chosen products
 		computed: {
 			total() {
 				return this.cart.reduce((accumulator, item) => {
@@ -51,7 +54,6 @@
 		methods: {
 			openCart() {
 				this.isActive = true;
-				console.log('click');
 			},
 			closeCart() {
 				this.isActive = false;
@@ -110,6 +112,7 @@
 		flex-flow: column nowrap;
 		justify-content: flex-start;
 		padding: 1em 2em 1em 1em;
+		font-size: var(--mobile-body-style);
 	}
 
 	.shopping-cart__header {
@@ -131,8 +134,8 @@
 	}
 
 	.close-icon-image {
-			height: 20px;
-			width: 20px;
+		height: 15px;
+		width: 15px;
 	}
 
 	.chosen-items {
@@ -170,7 +173,20 @@
 		.logo-bar__shopping-bag img {
 			height: 50px;
 			width: 50px;
-		}		
+		}	
+		
+		.shopping-cart__part {
+			font-size: var(--body-style);
+		}
+
+		.close-icon-image {
+			height: 20px;
+			width: 20px;
+		}
+
+		.chosen-items__item {
+			font-size: var(--body-style);
+		}
     }
 
 </style>

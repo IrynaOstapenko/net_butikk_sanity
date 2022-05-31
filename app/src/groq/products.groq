@@ -1,0 +1,14 @@
+*[_type == $type] {
+    _id,
+    title,
+    memory,
+    price, 
+    available,
+    category[]->{title},
+    description,
+    image {
+        asset -> {
+            url
+        }
+    }
+}

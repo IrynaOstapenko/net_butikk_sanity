@@ -1,5 +1,5 @@
 <template>
-    <div class="nav-container" :class="{'visible' : isOpen}">
+    <div class="nav-container" :class="{'visible' : isOpen}" @openMenu="openNav()">
         <RouterLink to="/iphones">iPhone</RouterLink>
         <RouterLink to="/macs">Mac</RouterLink>
         <RouterLink to="/watches">Apple Watch</RouterLink>
@@ -18,8 +18,9 @@
 
         methods: {
             //Function to open hamburger menu
-            openMenu() {
+            openNav() {
                 this.isOpen = true;
+                console.log('opened');
             },
             //Function to close hamburger menu
             closeMenu() {

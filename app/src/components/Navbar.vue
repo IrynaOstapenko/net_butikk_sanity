@@ -20,9 +20,7 @@
 
 </script>
 
-
 <style>
-/* Mobile */
     .navbar {
 		width: 100%;
 		height: 50px;
