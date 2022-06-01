@@ -72,6 +72,7 @@
 		.apple-logo-white {
 			display: none;
 		}
+
 		.nav-link a {
 			font-size: var(--body-style);
 		}
@@ -91,5 +92,4 @@
 			width: 30px;
 		}
 	}
-
 </style>
